@@ -11,6 +11,9 @@ if (!process.env.API_KEY) {
 const app = express();
 const port = 3000;
 
+const cors = require("cors");
+app.use(cors());
+
 app.use(morgan("combined"));
 
 app.get("/", async (req, res) => {
