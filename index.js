@@ -1,11 +1,9 @@
 import express from "express";
-
 import axios from "axios";
+import "dotenv/config";
 
 const app = express();
 const port = 3000;
-
-const API_KEY = "pat-na1-10e1e42a-93bb-4858-b88b-9ae41a1be592";
 
 app.get("/", async (req, res) => {
   try {
@@ -13,7 +11,7 @@ app.get("/", async (req, res) => {
       "https://api.hubapi.com/crm/v3/objects/products",
       {
         headers: {
-          Authorization: `Bearer ${API_KEY}`,
+          Authorization: `Bearer ${process.env.API_KEY}`,
         },
       }
     );
