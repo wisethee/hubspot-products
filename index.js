@@ -23,7 +23,6 @@ app.get("/", async (req, res) => {
     );
     res.type("application/json");
     res.json(response.data);
-    res.json(response.data);
   } catch (error) {
     res.json({ error: error.toString() });
   }
