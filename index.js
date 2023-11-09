@@ -1,10 +1,13 @@
 import express from "express";
 import axios from "axios";
+import cors from "cors";
 
 import "dotenv/config";
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 if (!process.env.API_KEY) {
   console.error("Missing API_KEY in environment variables");
