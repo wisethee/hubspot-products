@@ -17,7 +17,7 @@ if (!process.env.API_KEY) {
 app.get("/", async (req, res) => {
   try {
     const response = await axios.get(
-      "https://api.hubapi.com/crm/v3/objects/products?limit=10&properties=hs_sku&archived=false",
+      "https://api.hubapi.com/crm/v3/objects/products?limit=10&properties=hs_sku%2C%20hs_folder_name%2C%20name%2C%20description%2C%20price&archived=false",
       {
         headers: {
           Authorization: `Bearer ${process.env.API_KEY}`,
