@@ -41,7 +41,7 @@ import "dotenv/config";
 const app = express();
 const port = 3000;
 const axiosUrl =
-  "https://api.hubapi.com/crm/v3/objects/products?limit=10&properties=hs_sku%2C%20hs_folder_name%2C%20name%2C%20description%2C%20price%2C%20hs_price_usd%2C%20hs_price_gbp%2C%20hs_price_nok%2C%20hs_price_eur&archived=false";
+  "https://api.hubapi.com/crm/v3/objects/products?limit=10&properties=hs_sku%2C%20hs_folder_name%2C%20name%2C%20description%2C%20price%2C%20hs_price_usd%2C%20hs_price_gbp%2C%20hs_price_nok%2C%20hs_price_eur%2C%20standard_dealer_discount&archived=false";
 
 app.use(cors());
 
